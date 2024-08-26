@@ -7,9 +7,9 @@
     android:background="@color/white"
     tools:context=".fragments.SettingsFragment">
 
-<RelativeLayout
+ <RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_140sdp"
+    android:layout_height="@dimen/_120sdp"
     android:background="@drawable/setting_card">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -17,7 +17,7 @@
         android:id="@+id/profile_image"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_marginTop="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_30sdp"
         android:layout_marginStart="@dimen/_20sdp"
         android:src="@drawable/baseline_account_circle_24"
         app:civ_border_width="2dp"
@@ -32,7 +32,7 @@
         android:includeFontPadding="false"
         android:textColor="@color/white"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_9sdp"
         android:layout_toEndOf="@id/profile_image"
         android:layout_alignTop="@id/profile_image"
         android:text="Test user"/>
@@ -66,9 +66,10 @@
 
 </RelativeLayout>
 
-    <RelativeLayout
+ <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/_50sdp"
+     android:layout_marginTop="@dimen/_10sdp"
         android:orientation="horizontal">
         <ImageView
             android:id="@+id/iv"
@@ -99,11 +100,223 @@
             />
     </RelativeLayout>
 
+  <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@color/settings_view_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/notification"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/notifyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/iv1"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/pop_pins_medium"
+            android:textSize="@dimen/_14ssp"
+            android:text="@string/notification"/>
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/round_keyboard_arrow_right_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginHorizontal="@dimen/_14sdp"
         android:background="@color/settings_view_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/language"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/languageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/iv2"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/pop_pins_medium"
+            android:textSize="@dimen/_14ssp"
+            android:text="@string/language"/>
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/round_keyboard_arrow_right_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@color/settings_view_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/delete_user"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/deleteTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/iv3"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/pop_pins_medium"
+            android:textSize="@dimen/_14ssp"
+            android:text="@string/delete_account"/>
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/round_keyboard_arrow_right_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@color/settings_view_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/privacy"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/privacyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/iv4"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/pop_pins_medium"
+            android:textSize="@dimen/_14ssp"
+            android:text="@string/privacyPolicy"/>
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/round_keyboard_arrow_right_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:background="@color/settings_view_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/iv5"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/terms_condition"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:id="@+id/termsConditionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_toEndOf="@id/iv5"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/pop_pins_medium"
+            android:textSize="@dimen/_14ssp"
+            android:text="@string/termsCondition"/>
+        <ImageView
+            android:layout_width="@dimen/_34sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:src="@drawable/round_keyboard_arrow_right_24"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_18sdp"
+            android:contentDescription="@string/app_name"
+            android:layout_alignParentEnd="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_shape"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:fontFamily="@font/pop_pins_bold"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/logout"/>
+    </LinearLayout>
+
 
 
 </LinearLayout>
