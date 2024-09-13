@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary">
+        <ImageView
+            android:id="@+id/backIV"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/arrow_left"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_toEndOf="@id/backIV"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/pop_pins_bold"
+            android:textSize="@dimen/_14ssp"
+            android:text="Modifica Profilo"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        android:scrollIndicators="right"
+        android:scrollbarThumbVertical="@color/primary">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="106dp"
+                    android:layout_height="106dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:src="@drawable/baseline_account_circle_24"
+                    app:civ_border_width="2dp"
+                    android:tint="@color/primary"
+                    app:civ_border_color="@color/primary"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/change_photo"
+                    android:background="@drawable/button_shape"
+                    android:layout_gravity="center"
+                    android:layout_height="48dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/pop_pins_semi_bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Modifica anamnesi"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/button_shape"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/delete_photo"
+                    android:layout_height="48dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                       android:fontFamily="@font/pop_pins_semi_bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Modifica Profilo"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:layout_width="@dimen/_19sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:lines="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:hint="Test"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cognome"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:layout_width="@dimen/_19sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:hint="Test"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:layout_width="@dimen/_19sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/email"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:hint="test@gmail.com"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cellulare"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:layout_width="@dimen/_19sdp"
+                    android:layout_height="@dimen/_19sdp"
+                    android:contentDescription="@string/app_name"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/call"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:hint="1234567890"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Codice postale"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:includeFontPadding="false"
+                    android:singleLine="true"
+                    android:hint="0000"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Città"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:hint="test"
+                    android:includeFontPadding="false"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sesso"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:hint="test"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Data di nascita"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:hint="12-12-1993"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_shape"
+                android:layout_gravity="center"
+                android:layout_height="48dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:fontFamily="@font/pop_pins_bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:text="Salva"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
