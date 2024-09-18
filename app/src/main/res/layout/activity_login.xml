@@ -17,7 +17,7 @@
         android:textColor="@color/black"
         android:includeFontPadding="false"
         android:fontFamily="@font/pop_pins_semi_bold"
-        android:textSize="@dimen/_30ssp"
+        android:textSize="34sp"
         android:text="@string/welcome"/>
     <TextView
         android:includeFontPadding="false"
@@ -25,15 +25,16 @@
         android:layout_height="wrap_content"
         android:text="@string/login_account"
         android:fontFamily="@font/pop_pins_medium"
-        android:textSize="@dimen/_14ssp"/>
+        android:textSize="16sp"/>
    <TextView
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:text="@string/e_mail"
-       android:layout_marginTop="@dimen/_10sdp"
+       android:includeFontPadding="false"
+       android:layout_marginTop="20dp"
        android:textColor="@color/black"
        android:fontFamily="@font/pop_pins_medium"
-       android:textSize="@dimen/_14ssp"/>
+       android:textSize="18sp"/>
 
      <LinearLayout
          android:layout_width="match_parent"
@@ -41,13 +42,14 @@
          android:orientation="horizontal"
          android:background="@drawable/edit_bg">
          <ImageView
-             android:layout_width="@dimen/_19sdp"
-             android:layout_height="@dimen/_19sdp"
+             android:layout_width="20dp"
+             android:layout_height="20dp"
              android:contentDescription="@string/app_name"
              android:layout_gravity="center_vertical"
              android:layout_marginHorizontal="10dp"
              android:src="@drawable/email"/>
          <EditText
+             android:id="@+id/emailED"
              android:layout_width="match_parent"
              android:background="@android:color/transparent"
              android:padding="0dp"
@@ -62,10 +64,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
-        android:layout_marginTop="@dimen/_14sdp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"
         android:fontFamily="@font/pop_pins_medium"
-        android:textSize="@dimen/_14ssp"/>
+        android:textSize="16sp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="45dp"
@@ -73,15 +75,15 @@
         android:background="@drawable/edit_bg">
         <ImageView
             android:id="@+id/lockIV"
-            android:layout_width="@dimen/_19sdp"
-            android:layout_height="@dimen/_19sdp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:contentDescription="@string/app_name"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
             android:layout_marginHorizontal="10dp"
             android:src="@drawable/lock"/>
         <EditText
-            android:id="@+id/passED"
+            android:id="@+id/passwordED"
             android:layout_width="wrap_content"
             android:layout_toRightOf="@id/lockIV"
             android:layout_toLeftOf="@id/showIV"
@@ -91,13 +93,13 @@
             android:hint="*******"
             android:singleLine="true"
             android:fontFamily="@font/pop_pins_regular"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="14sp"
             android:layout_height="match_parent"/>
 
         <ImageView
             android:id="@+id/showIV"
-            android:layout_width="@dimen/_19sdp"
-            android:layout_height="@dimen/_19sdp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:contentDescription="@string/app_name"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
@@ -111,26 +113,38 @@
         android:layout_height="wrap_content"
         android:text="@string/forgot_password"
         android:layout_gravity="right"
-        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/primary"
         android:fontFamily="@font/pop_pins_medium"
-        android:textSize="@dimen/_12ssp"/>
+        android:textSize="16sp"/>
 
-    <LinearLayout
-        android:layout_marginTop="@dimen/_15sdp"
+    <RelativeLayout
+        android:id="@+id/login"
+        android:layout_marginTop="25dp"
         android:layout_width="match_parent"
         android:background="@drawable/button_shape"
         android:layout_gravity="center"
         android:layout_height="48dp">
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/PB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="4dp"
+            android:indeterminateTint="@color/white"
+            />
         <TextView
+            android:id="@+id/TV"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:textColor="@color/white"
             android:gravity="center"
+            android:includeFontPadding="false"
             android:fontFamily="@font/pop_pins_bold"
-            android:textSize="@dimen/_12ssp"
+            android:textSize="16sp"
             android:text="@string/signin"/>
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/signUp"
@@ -142,18 +156,20 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:text="@string/not_account"
             android:fontFamily="@font/pop_pins_regular"
-            android:textSize="@dimen/_13ssp"
+            android:textSize="16sp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/signup"
+            android:includeFontPadding="false"
             android:textColor="@color/primary"
             android:layout_marginStart="3dp"
             android:fontFamily="@font/pop_pins_bold"
-            android:textSize="@dimen/_16ssp"
+            android:textSize="20sp"
             />
     </LinearLayout>
 

@@ -37,7 +37,7 @@
                    app:civ_border_color="@color/primary"/>
            </RelativeLayout>
 
-           <LinearLayout
+           <RelativeLayout
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:layout_marginHorizontal="20dp"
@@ -47,8 +47,10 @@
                    android:backgroundTint="@color/change_photo"
                    android:background="@drawable/button_shape"
                    android:layout_gravity="center"
+                   android:layout_centerInParent="true"
                    android:layout_height="48dp">
                    <TextView
+                       android:id="@+id/anamnesiTV"
                        android:layout_width="match_parent"
                        android:layout_height="match_parent"
                        android:textColor="@color/black"
@@ -56,29 +58,13 @@
                        android:paddingHorizontal="10dp"
                        android:fontFamily="@font/pop_pins_semi_bold"
                        android:textSize="@dimen/_12ssp"
-                       android:text="Cambia foto"/>
+                       android:text="Modifica anamnesi"/>
                </LinearLayout>
                <Space
       android:layout_width="5dp"
       android:layout_height="wrap_content"/>
-               <LinearLayout
-                   android:layout_width="wrap_content"
-                   android:backgroundTint="@color/delete_photo"
-                   android:background="@drawable/button_shape"
-                   android:layout_gravity="center"
-                   android:layout_height="48dp">
-                   <TextView
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:textColor="@color/black"
-                       android:gravity="center"
-                       android:paddingHorizontal="10dp"
-                       android:fontFamily="@font/pop_pins_semi_bold"
-                       android:textSize="@dimen/_12ssp"
-                       android:text="Modifica Profilo"/>
-               </LinearLayout>
 
-           </LinearLayout>
+           </RelativeLayout>
 
            <TextView
                android:layout_width="wrap_content"
@@ -102,6 +88,7 @@
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
                <EditText
+                   android:id="@+id/firstED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
@@ -138,6 +125,7 @@
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
                <EditText
+                   android:id="@+id/lastED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
@@ -170,6 +158,7 @@
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
                <EditText
+                   android:id="@+id/emailED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
@@ -201,12 +190,13 @@
                    android:layout_gravity="center_vertical"
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
-               <EditText
+               <TextView
+                   android:id="@+id/mobileED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
                    android:singleLine="true"
-                   android:hint="test@gmail.com"
+                   android:gravity="center_vertical"
                    android:fontFamily="@font/pop_pins_regular"
                    android:textSize="@dimen/_12ssp"
                    android:layout_height="match_parent"/>
@@ -216,7 +206,7 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Codice postale"
-               android:layout_marginTop="@dimen/_10sdp"
+              android:gravity="center_vertical"
                android:textColor="@color/black"
                android:fontFamily="@font/pop_pins_medium"
                android:textSize="@dimen/_14ssp"/>
@@ -233,11 +223,13 @@
                    android:layout_gravity="center_vertical"
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
-               <EditText
+               <TextView
+                   android:id="@+id/codeED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
                    android:singleLine="true"
+                   android:gravity="center_vertical"
                    android:hint="test@gmail.com"
                    android:fontFamily="@font/pop_pins_regular"
                    android:textSize="@dimen/_12ssp"
@@ -266,6 +258,7 @@
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
                <EditText
+                   android:id="@+id/cityED"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
@@ -277,9 +270,11 @@
            </LinearLayout>
 
            <TextView
+
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Sesso"
+               android:gravity="center_vertical"
                android:layout_marginTop="@dimen/_10sdp"
                android:textColor="@color/black"
                android:fontFamily="@font/pop_pins_medium"
@@ -297,12 +292,14 @@
                    android:layout_gravity="center_vertical"
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
-               <EditText
+               <TextView
+                   android:id="@+id/sex"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
                    android:singleLine="true"
-                   android:hint="test@gmail.com"
+                   android:gravity="center_vertical"
+
                    android:fontFamily="@font/pop_pins_regular"
                    android:textSize="@dimen/_12ssp"
                    android:layout_height="match_parent"/>
@@ -329,11 +326,13 @@
                    android:layout_gravity="center_vertical"
                    android:layout_marginHorizontal="10dp"
                    android:src="@drawable/name"/>
-               <EditText
+               <TextView
+                   android:id="@id/dateTV"
                    android:layout_width="match_parent"
                    android:background="@android:color/transparent"
                    android:padding="0dp"
                    android:singleLine="true"
+                   android:gravity="center_vertical"
                    android:hint="test@gmail.com"
                    android:fontFamily="@font/pop_pins_regular"
                    android:textSize="@dimen/_12ssp"
@@ -1245,103 +1244,10 @@
                    </LinearLayout>
                </LinearLayout>
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginHorizontal="0dp"
-                   android:orientation="vertical">
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_marginTop="10dp"
-                       android:fontFamily="@font/pop_pins_medium"
-                       android:textSize="@dimen/_14ssp"
-                       android:textColor="#373737"
-                       android:text="Ha avuto o ha attualmente malattie cardiache?"/>
 
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:orientation="horizontal"
-                       android:layout_height="wrap_content">
-                       <CheckBox
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:fontFamily="@font/pop_pins_bold"
-                           android:textSize="@dimen/_12ssp"
-                           android:textColor="@color/black"
-                           android:includeFontPadding="false"
-                           android:text="Yes"/>
-                       <CheckBox
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:fontFamily="@font/pop_pins_bold"
-                           android:textSize="@dimen/_12ssp"
-                           android:layout_marginHorizontal="4dp"
-                           android:includeFontPadding="false"
-                           android:text="No"/>
-                   </LinearLayout>
-               </LinearLayout>
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:layout_marginHorizontal="0dp"
-                   android:orientation="vertical">
-                   <TextView
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:layout_marginTop="10dp"
-                       android:fontFamily="@font/pop_pins_medium"
-                       android:textSize="@dimen/_14ssp"
-                       android:textColor="#373737"
-                       android:text="*Il/La sottoscritto/a autorizza il trattamento dei dati personali nel rispetto della vigente normativa sulla protezione dei dati personali ed, in particolare, il Regolamento Europeo per la protezione dei dati personali 2016/679, il d.lgs. 30/06/2003 n. 196 e successive modifiche e integrazioni, come modificato da ultimo dal d.lgs. 10/08/2018 n. 101"/>
-                   <LinearLayout
-                       android:layout_width="match_parent"
-                       android:orientation="horizontal"
-                       android:layout_height="wrap_content">
-                       <CheckBox
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:fontFamily="@font/pop_pins_bold"
-                           android:textSize="@dimen/_12ssp"
-                           android:textColor="@color/black"
-                           android:includeFontPadding="false"
-                           android:text="Accetto"/>
-                       <CheckBox
-                           android:layout_width="wrap_content"
-                           android:layout_height="wrap_content"
-                           android:fontFamily="@font/pop_pins_bold"
-                           android:textSize="@dimen/_12ssp"
-                           android:layout_marginHorizontal="4dp"
-                           android:includeFontPadding="false"
-                           android:text="Non accetto"/>
-                   </LinearLayout>
-               </LinearLayout>
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginTop="10dp"
-                   android:layout_marginHorizontal="0dp"
-                   android:fontFamily="@font/pop_pins_medium"
-                   android:textSize="@dimen/_14ssp"
-                   android:textColor="#373737"
-                   android:text="** Si informa il paziente che il rifiuto al trattamento dei propri dati personali a fini medici può influenzare negativamente la capacità del medico di effettuare un'accurata anamnesi e di fornire un trattamento ottimale. La mancanza di informazioni essenziali può portare a una diagnosi incompleta o inesatta e, di conseguenza, a un trattamento che potrebbe non essere il più adeguato per la sua condizione. È importante comprendere che la decisione di non permettere il trattamento dei dati personali è un diritto del paziente, ma comporta il rischio di non ricevere le cure più appropriate basate su un'analisi completa delle informazioni mediche."/>
-               <LinearLayout
-                   android:layout_marginHorizontal="0dp"
-                   android:layout_marginTop="@dimen/_15sdp"
-                   android:layout_width="match_parent"
-                   android:background="@drawable/button_shape"
-                   android:layout_gravity="center"
-                   android:layout_height="48dp">
-                   <TextView
-                       android:layout_width="match_parent"
-                       android:layout_height="match_parent"
-                       android:textColor="@color/white"
-                       android:gravity="center"
-                       android:fontFamily="@font/pop_pins_bold"
-                       android:textSize="@dimen/_12ssp"
-                       android:text="Invia"/>
-               </LinearLayout>
+
+
 
            </LinearLayout>
 

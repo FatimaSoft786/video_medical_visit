@@ -59,6 +59,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/healthYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -67,6 +68,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/healthNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -96,6 +98,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/illnessYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -104,6 +107,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/illnessNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -128,6 +132,8 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/illED"
+                    android:paddingHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
@@ -152,6 +158,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/pastSurgeryYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -160,6 +167,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/pastSurgeryNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -184,7 +192,9 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/past_surgeryED"
                     android:layout_width="match_parent"
+                    android:paddingHorizontal="10dp"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
             </LinearLayout>
@@ -208,6 +218,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/currentMedicationYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -216,6 +227,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/currentMedicationNO"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -240,6 +252,8 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/currentED"
+                    android:paddingHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
@@ -264,6 +278,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/heartDiseaseYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -272,6 +287,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/heartDiseaseNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -301,6 +317,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/bloodPressureYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -309,6 +326,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/bloodPressureNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -338,6 +356,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/allergiesYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -346,6 +365,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/allergiesNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -370,6 +390,8 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/allergiesED"
+                    android:paddingHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
@@ -394,6 +416,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/diabetesYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -402,6 +425,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/diabetesNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -431,6 +455,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/kidneyDiseaseYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -439,6 +464,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/kidneyDiseaseNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -468,6 +494,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/thyroidYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -476,6 +503,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/thyroidNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -505,6 +533,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/stomachYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -513,6 +542,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/stomachNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -542,6 +572,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/digestiveYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -550,6 +581,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/digestiveNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -574,7 +606,9 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/digestiveED"
                     android:layout_width="match_parent"
+                    android:paddingHorizontal="10dp"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
             </LinearLayout>
@@ -598,6 +632,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/lungYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -606,6 +641,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/lungNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -630,7 +666,9 @@
                     android:textColor="#373737"
                     android:text="Se è sì, quali?"/>
                 <EditText
+                    android:id="@+id/lungED"
                     android:layout_width="match_parent"
+                    android:paddingHorizontal="10dp"
                     android:layout_height="@dimen/_30sdp"
                     android:background="@drawable/edit_bg"/>
             </LinearLayout>
@@ -654,6 +692,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/venerealYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -662,6 +701,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/venerealNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -691,6 +731,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/nervousYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -699,6 +740,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/nervousNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -728,6 +770,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/smokeYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -736,6 +779,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/smokeNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -765,6 +809,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/alcoholYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -773,6 +818,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/alcoholNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -802,6 +848,7 @@
                     android:orientation="horizontal"
                     android:layout_height="wrap_content">
                     <CheckBox
+                        android:id="@+id/usualYes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -810,6 +857,7 @@
                         android:includeFontPadding="false"
                         android:text="Yes"/>
                     <CheckBox
+                        android:id="@+id/usualNo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/pop_pins_bold"
@@ -819,8 +867,8 @@
                         android:text="No"/>
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="20dp"
@@ -832,141 +880,163 @@
                     android:fontFamily="@font/pop_pins_medium"
                     android:textSize="@dimen/_14ssp"
                     android:textColor="#373737"
-                    android:text="Fuma?"/>
+                    android:text="Se è sì, quali?"/>
+                <EditText
+                    android:id="@+id/usualED"
 
-                <LinearLayout
+                    android:paddingHorizontal="10dp"
                     android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:includeFontPadding="false"
-                        android:text="Yes"/>
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:layout_marginHorizontal="4dp"
-                        android:includeFontPadding="false"
-                        android:text="No"/>
-                </LinearLayout>
+                    android:layout_height="@dimen/_30sdp"
+                    android:background="@drawable/edit_bg"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/pop_pins_medium"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="#373737"
-                    android:text="Beve alcolici abitualmente?"/>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/pop_pins_medium"-->
+<!--                    android:textSize="@dimen/_14ssp"-->
+<!--                    android:textColor="#373737"-->
+<!--                    android:text="Fuma?"/>-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:includeFontPadding="false"
-                        android:text="Yes"/>
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:layout_marginHorizontal="4dp"
-                        android:includeFontPadding="false"
-                        android:text="No"/>
-                </LinearLayout>
-            </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="Yes"/>-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:layout_marginHorizontal="4dp"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="No"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/pop_pins_medium"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="#373737"
-                    android:text="Prende abitualmente dei farmaci?"/>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/pop_pins_medium"-->
+<!--                    android:textSize="@dimen/_14ssp"-->
+<!--                    android:textColor="#373737"-->
+<!--                    android:text="Beve alcolici abitualmente?"/>-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:includeFontPadding="false"
-                        android:text="Yes"/>
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:layout_marginHorizontal="4dp"
-                        android:includeFontPadding="false"
-                        android:text="No"/>
-                </LinearLayout>
-            </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="Yes"/>-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:layout_marginHorizontal="4dp"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="No"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/pop_pins_medium"
-                    android:textSize="@dimen/_14ssp"
-                    android:textColor="#373737"
-                    android:text="Ha avuto o ha attualmente malattie cardiache?"/>
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/pop_pins_medium"-->
+<!--                    android:textSize="@dimen/_14ssp"-->
+<!--                    android:textColor="#373737"-->
+<!--                    android:text="Prende abitualmente dei farmaci?"/>-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_height="wrap_content">
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:textColor="@color/black"
-                        android:includeFontPadding="false"
-                        android:text="Yes"/>
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/pop_pins_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:layout_marginHorizontal="4dp"
-                        android:includeFontPadding="false"
-                        android:text="No"/>
-                </LinearLayout>
-            </LinearLayout>
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="Yes"/>-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:layout_marginHorizontal="4dp"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="No"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginHorizontal="20dp"-->
+<!--                android:orientation="vertical">-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="10dp"-->
+<!--                    android:fontFamily="@font/pop_pins_medium"-->
+<!--                    android:textSize="@dimen/_14ssp"-->
+<!--                    android:textColor="#373737"-->
+<!--                    android:text="Ha avuto o ha attualmente malattie cardiache?"/>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_height="wrap_content">-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="Yes"/>-->
+<!--                    <CheckBox-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/pop_pins_bold"-->
+<!--                        android:textSize="@dimen/_12ssp"-->
+<!--                        android:layout_marginHorizontal="4dp"-->
+<!--                        android:includeFontPadding="false"-->
+<!--                        android:text="No"/>-->
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -1012,14 +1082,23 @@
                 android:textSize="@dimen/_14ssp"
                 android:textColor="#373737"
                 android:text="** Si informa il paziente che il rifiuto al trattamento dei propri dati personali a fini medici può influenzare negativamente la capacità del medico di effettuare un'accurata anamnesi e di fornire un trattamento ottimale. La mancanza di informazioni essenziali può portare a una diagnosi incompleta o inesatta e, di conseguenza, a un trattamento che potrebbe non essere il più adeguato per la sua condizione. È importante comprendere che la decisione di non permettere il trattamento dei dati personali è un diritto del paziente, ma comporta il rischio di non ricevere le cure più appropriate basate su un'analisi completa delle informazioni mediche."/>
-            <LinearLayout
+            <RelativeLayout
+                android:id="@+id/save"
                 android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
                 android:background="@drawable/button_shape"
                 android:layout_gravity="center"
                 android:layout_height="48dp">
+                <ProgressBar
+                    android:visibility="gone"
+                    android:id="@id/PB"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminateTint="@color/white"/>
                 <TextView
+                    android:id="@+id/TV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
@@ -1027,7 +1106,7 @@
                     android:fontFamily="@font/pop_pins_bold"
                     android:textSize="@dimen/_12ssp"
                     android:text="Invia"/>
-            </LinearLayout>
+            </RelativeLayout>
 
         </LinearLayout>
     </ScrollView>
