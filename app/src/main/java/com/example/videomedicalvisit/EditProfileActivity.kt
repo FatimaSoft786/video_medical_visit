@@ -1,41 +1,42 @@
 package com.example.videomedicalvisit
 
+import android.app.Activity
 import android.app.DatePickerDialog
+import android.content.Context
+import android.content.Intent
 import android.content.SharedPreferences
 import android.content.res.Configuration
+import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.bumptech.glide.Glide
 import com.example.videomedicalvisit.databinding.ActivityEditProfileBinding
+import com.example.videomedicalvisit.utils.RetrofitClient
 import com.fatima.soft.dogz.utils.Constant
 import com.fatima.soft.dogz.utils.VolleySingleton
 
-import com.google.android.gms.cast.framework.media.ImagePicker
 import org.json.JSONObject
+import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-
 class EditProfileActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityEditProfileBinding
     private var selectedImagePath: Uri? = null
     var gender = arrayListOf<String>("Donna","Uomo")
     lateinit var token: String
+    lateinit var id: String
     lateinit var selectedSexOption: String
     lateinit var sharedPref: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,7 @@ class EditProfileActivity : AppCompatActivity() {
         setLocale("it")
          sharedPref =  getSharedPreferences("MyPreferences", MODE_PRIVATE)
          token = sharedPref.getString("token", "")!!
+         id = sharedPref.getString("id", "")!!
         binding.calendar.setOnClickListener{
            val calendar = Calendar.getInstance()
            val year = calendar.get(Calendar.YEAR)
@@ -86,10 +88,39 @@ class EditProfileActivity : AppCompatActivity() {
      binding.change.setOnClickListener {
          editProfile()
      }
-        binding.change.setOnClickListener {
+        binding.changeLT.setOnClickListener {
+     openGallery()
+        }
 
+    }
+    private fun openGallery(){
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, 999)
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == 999 && resultCode == Activity.RESULT_OK) {
+            val selectedImageUri = data?.data
+            Glide.with(applicationContext).load(selectedImageUri).into(binding.profileImage)
+            val file = File(getRealPathFromUri(this, selectedImageUri))
+            Log.d("FILE", "onActivityResult: ${file}")
         }
     }
+
+    fun getRealPathFromUri(context: Context, contentUri: Uri?): String {
+        var cursor: Cursor? = null
+        try {
+            val proj = arrayOf(MediaStore.Images.Media.DATA)
+            cursor = context.contentResolver.query(contentUri!!, proj, null, null, null)
+            val column_index = cursor!!.getColumnIndexOrThrow(MediaStore.Images.Media.DATA)
+            cursor!!.moveToFirst()
+            return cursor!!.getString(column_index)
+        } finally {
+            cursor?.close()
+        }
+    }
+
 
     private fun setLocale(languageCode: String) {
         val locale = Locale(languageCode)
@@ -195,6 +226,31 @@ class EditProfileActivity : AppCompatActivity() {
         }
         VolleySingleton.getInstance(applicationContext).add(jsonRequest)
     }
-
+//    fun uploadImage(imageFile: File, id: String, headers: Map<String, String>) {
+//        // Create RequestBody for image file
+//        val requestBody = RequestBody.create("image/*".toMediaTypeOrNull(), imageFile)
+//
+//        // Prepare the file part (image)
+//        val imagePart = MultipartBody.Part.createFormData("image", imageFile.name, requestBody)
+//
+//
+//
+//        // Call the upload API
+//        val call = RetrofitClient.instance.uploadImage(headers, id, imagePart)
+//
+//        call.enqueue(object : Callback<ResponseBody>, Callback<ResponseBody> {
+//
+//
+//            override fun onResponse(call: retrofit2.Call<ResponseBody>, response: retrofit2.Response<ResponseBody>) {
+//                Log.d("Upload", "onResponse: ${response}")
+//            }
+//
+//            override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
+//                Log.d("TAG", "onFailure: ${t.message}")
+//            }
+//
+//
+//        })
+//    }
 
 }

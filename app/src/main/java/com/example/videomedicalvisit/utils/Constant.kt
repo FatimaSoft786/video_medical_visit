@@ -8,4 +8,10 @@ object Constant {
     var PROFILE = BASE_URL + "api/user/userDetails"
     var EDITPROFILE = BASE_URL + "api/user/editPatientProfile"
     var PATIENTMEDICALHISTORY = BASE_URL + "api/user/patientMedicalHistory"
+    var DOCTORSLIST = BASE_URL + "api/user/doctorsList"
+    var LIKE = BASE_URL + "api/user/like"
+    var FAVORITEBYPATIENT = BASE_URL + "api/user/favoritesByPatient"
+    var CHECKEMAIL = BASE_URL + "api/user/checkEmail"
+    var RESET_PASSWORD = BASE_URL + "api/user/resetPassword"
+    var UPLOADPICTURE = BASE_URL + "api/user/uploadProfilePicture"
 }

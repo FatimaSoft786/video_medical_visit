@@ -1,19 +1,31 @@
 package com.example.videomedicalvisit
 
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.example.videomedicalvisit.databinding.ActivityMainBinding
+import com.example.videomedicalvisit.fragments.FavoriteFragment
 import com.example.videomedicalvisit.fragments.HomeFragment
 import com.example.videomedicalvisit.fragments.SettingsFragment
 
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    val REQUEST_CODE = 1001
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
      binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        permission()
+        loadFragment(HomeFragment())
+
 
   binding.bottomNav.setOnItemSelectedListener {
       when(it.itemId){
@@ -22,7 +34,7 @@ class MainActivity : AppCompatActivity() {
               true
           }
           R.id.favorite -> {
-              loadFragment(HomeFragment())
+              loadFragment(FavoriteFragment())
               true
           }
           R.id.appointment -> {
@@ -49,4 +61,57 @@ class MainActivity : AppCompatActivity() {
         transaction.replace(R.id.container,fragment)
         transaction.commit()
     }
+
+   private  fun permission(){
+       if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+           if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_MEDIA_IMAGES)
+               != PackageManager.PERMISSION_GRANTED) {
+
+               ActivityCompat.requestPermissions(
+                   this,
+                   arrayOf(android.Manifest.permission.READ_MEDIA_IMAGES),
+                   101
+               )
+           }
+       }
+       if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) {
+           if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_EXTERNAL_STORAGE)
+               != PackageManager.PERMISSION_GRANTED) {
+
+               ActivityCompat.requestPermissions(
+                   this,
+                   arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE),
+                   102
+               )
+           }
+       }
+
+   }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        when (requestCode) {
+            101 -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    // Permission for reading images is granted
+                } else {
+                    // Permission denied
+                }
+            }
+            102 -> {
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    // Permission for reading external storage is granted
+                } else {
+                    // Permission denied
+                }
+            }
+        }
+    }
+
+
 }
