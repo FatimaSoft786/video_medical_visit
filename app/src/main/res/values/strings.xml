@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Video Medical Visit</string>
     <string name="welcome">Bentornato</string>
     <string name="login_account">Accedi al tuo account</string>
@@ -26,7 +26,7 @@
     <string name="sign_up_our">Iscrivendoti accetterai i nostri</string>
     <string name="and">e la</string>
     <string name="terms_condition">Termini&amp;Condizioni</string>
-    <string name="privacy_policy">Politica sulla Privacy.</string>
+    <string name="privacy_policy">Politica sulla Privacy</string>
     <string name="edit_profile">Modifica profilo</string>
     <string name="notification">Notifiche</string>
     <string name="language">Lingua</string>
@@ -36,5 +36,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout">Logout</string>
+    <string name="Patient">Pazienti</string>
+    <string name="Appointments">Appuntamenti</string>
+    <string name="Income">Fatture</string>
+    <string name="today_appointments">Appuntamenti Giornalieri</string>
+    <string name="see_all">Visualizza tutti</string>
+    <string name="profile">Profilo</string>
+    <string name="accept">Accetta</string>
+    <string name="declined">Declina</string>
+    <string name="appointment_requests">Richieste di Appuntamenti</string>
+    <string name="hi">Hi,</string>
 
 </resources>

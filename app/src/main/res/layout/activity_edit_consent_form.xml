@@ -66,7 +66,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/healthNo"
                         android:layout_width="wrap_content"
@@ -105,7 +105,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/illnessNo"
                         android:layout_width="wrap_content"
@@ -165,7 +165,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/pastSurgeryNo"
                         android:layout_width="wrap_content"
@@ -225,7 +225,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/currentMedicationNO"
                         android:layout_width="wrap_content"
@@ -285,7 +285,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/heartDiseaseNo"
                         android:layout_width="wrap_content"
@@ -324,7 +324,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/bloodPressureNo"
                         android:layout_width="wrap_content"
@@ -363,7 +363,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/allergiesNo"
                         android:layout_width="wrap_content"
@@ -423,7 +423,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/diabetesNo"
                         android:layout_width="wrap_content"
@@ -462,7 +462,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/kidneyDiseaseNo"
                         android:layout_width="wrap_content"
@@ -501,7 +501,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/thyroidNo"
                         android:layout_width="wrap_content"
@@ -540,7 +540,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/stomachNo"
                         android:layout_width="wrap_content"
@@ -579,7 +579,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/digestiveNo"
                         android:layout_width="wrap_content"
@@ -639,7 +639,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/lungNo"
                         android:layout_width="wrap_content"
@@ -699,7 +699,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/venerealNo"
                         android:layout_width="wrap_content"
@@ -738,7 +738,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/nervousNo"
                         android:layout_width="wrap_content"
@@ -777,7 +777,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/smokeNo"
                         android:layout_width="wrap_content"
@@ -816,7 +816,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/alcoholNo"
                         android:layout_width="wrap_content"
@@ -855,7 +855,7 @@
                         android:textSize="@dimen/_12ssp"
                         android:textColor="@color/black"
                         android:includeFontPadding="false"
-                        android:text="Yes"/>
+                        android:text="Sì"/>
                     <CheckBox
                         android:id="@+id/usualNo"
                         android:layout_width="wrap_content"

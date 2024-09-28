@@ -21,11 +21,20 @@ import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.bumptech.glide.Glide
 import com.example.videomedicalvisit.databinding.ActivityEditProfileBinding
+import com.example.videomedicalvisit.utils.ApiService
+import com.example.videomedicalvisit.utils.DoctorRes
 import com.example.videomedicalvisit.utils.RetrofitClient
 import com.fatima.soft.dogz.utils.Constant
 import com.fatima.soft.dogz.utils.VolleySingleton
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
 
 import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Calendar
@@ -39,6 +48,7 @@ class EditProfileActivity : AppCompatActivity() {
     lateinit var id: String
     lateinit var selectedSexOption: String
     lateinit var sharedPref: SharedPreferences
+    private lateinit var file: File
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityEditProfileBinding.inflate(layoutInflater)
@@ -91,6 +101,10 @@ class EditProfileActivity : AppCompatActivity() {
         binding.changeLT.setOnClickListener {
      openGallery()
         }
+        binding.backIV.setOnClickListener {
+            startActivity(Intent(applicationContext,MainActivity::class.java))
+            finish()
+        }
 
     }
     private fun openGallery(){
@@ -103,8 +117,9 @@ class EditProfileActivity : AppCompatActivity() {
         if (requestCode == 999 && resultCode == Activity.RESULT_OK) {
             val selectedImageUri = data?.data
             Glide.with(applicationContext).load(selectedImageUri).into(binding.profileImage)
-            val file = File(getRealPathFromUri(this, selectedImageUri))
+             file = File(getRealPathFromUri(this, selectedImageUri))
             Log.d("FILE", "onActivityResult: ${file}")
+            uploadProfileImage()
         }
     }
 
@@ -226,31 +241,47 @@ class EditProfileActivity : AppCompatActivity() {
         }
         VolleySingleton.getInstance(applicationContext).add(jsonRequest)
     }
-//    fun uploadImage(imageFile: File, id: String, headers: Map<String, String>) {
-//        // Create RequestBody for image file
-//        val requestBody = RequestBody.create("image/*".toMediaTypeOrNull(), imageFile)
-//
-//        // Prepare the file part (image)
-//        val imagePart = MultipartBody.Part.createFormData("image", imageFile.name, requestBody)
-//
-//
-//
-//        // Call the upload API
-//        val call = RetrofitClient.instance.uploadImage(headers, id, imagePart)
-//
-//        call.enqueue(object : Callback<ResponseBody>, Callback<ResponseBody> {
-//
-//
-//            override fun onResponse(call: retrofit2.Call<ResponseBody>, response: retrofit2.Response<ResponseBody>) {
-//                Log.d("Upload", "onResponse: ${response}")
-//            }
-//
-//            override fun onFailure(call: retrofit2.Call<ResponseBody>, t: Throwable) {
-//                Log.d("TAG", "onFailure: ${t.message}")
-//            }
-//
-//
-//        })
-//    }
+
+
+    fun uploadProfileImage(){
+        binding.PB1.visibility = View.VISIBLE
+        binding.tv.visibility = View.GONE
+        val retrofit = Retrofit.Builder()
+            .baseUrl(Constant.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+
+        val requestFile = RequestBody.create("multipart/form-data".toMediaTypeOrNull(), file)
+        val body = MultipartBody.Part.createFormData("profile", file.name, requestFile)
+        val id = RequestBody.create("multipart/form-data".toMediaTypeOrNull(),id)
+
+        val apiService = retrofit.create(ApiService::class.java)
+        val token ="Bearer $token"
+        Log.d("TAG", "uploadProfileImage: ${id}")
+        Log.d("TAG", "uploadProfileImage: ${token}")
+        Log.d("TAG", "uploadProfileImage: ${file}")
+        Log.d("TAG", "uploadProfileImage: ${id}")
+        val call = apiService.uploadPicture(body,id,token)
+        Log.d("TAG", "uploadProfileImage: ${call}")
+        call.enqueue(object : Callback<DoctorRes> {
+            override fun onResponse(call: Call<DoctorRes>, response: retrofit2.Response<DoctorRes>) {
+                if (response.isSuccessful) {
+                    binding.PB1.visibility = View.GONE
+                    binding.tv.visibility = View.VISIBLE
+                    Toast.makeText(applicationContext, "Profile picture updated, it takes few seconds to load in the app.", Toast.LENGTH_SHORT).show()
+                }
+            }
+
+            override fun onFailure(call: Call<DoctorRes>, t: Throwable) {
+                Log.d("TAG", "onResponse: ${t.message}")
+                binding.PB1.visibility = View.GONE
+                binding.tv.visibility = View.VISIBLE
+                Toast.makeText(applicationContext, t.message.toString(), Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+
+    }
 
 }

@@ -2,28 +2,34 @@ package com.example.videomedicalvisit
 
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import android.os.Bundle
+import android.provider.Settings
 import android.widget.Toast
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.videomedicalvisit.databinding.ActivityMainBinding
+import com.example.videomedicalvisit.fragments.AppointmentFragment
 import com.example.videomedicalvisit.fragments.FavoriteFragment
 import com.example.videomedicalvisit.fragments.HomeFragment
+import com.example.videomedicalvisit.fragments.PaymentFragment
 import com.example.videomedicalvisit.fragments.SettingsFragment
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     val REQUEST_CODE = 1001
+    private val STORAGE_PERMISSION_CODE = 100
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
      binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        permission()
+       permission()
         loadFragment(HomeFragment())
 
 
@@ -38,11 +44,11 @@ class MainActivity : AppCompatActivity() {
               true
           }
           R.id.appointment -> {
-              loadFragment(HomeFragment())
+              loadFragment(AppointmentFragment())
               true
           }
           R.id.wallet -> {
-              loadFragment(HomeFragment())
+              loadFragment(PaymentFragment())
               true
           }
           R.id.settings -> {
@@ -100,18 +106,24 @@ class MainActivity : AppCompatActivity() {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     // Permission for reading images is granted
                 } else {
-                    // Permission denied
+                   openAppSettings()
                 }
             }
             102 -> {
                 if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
                     // Permission for reading external storage is granted
                 } else {
-                    // Permission denied
+                    openAppSettings()
                 }
             }
         }
     }
 
+    fun openAppSettings() {
+        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS)
+        val uri = Uri.fromParts("package", packageName, null)
+        intent.data = uri
+        startActivity(intent)
+    }
 
 }

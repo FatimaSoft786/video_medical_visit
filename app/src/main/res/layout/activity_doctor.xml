@@ -48,6 +48,68 @@
                 android:text="Riempi il Form per l’iscrizione."
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_12ssp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="106dp"
+                    android:layout_height="106dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:src="@drawable/baseline_account_circle_24"
+                    app:civ_border_width="2dp"
+                    android:tint="@color/primary"
+                    app:civ_border_color="@color/primary"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/upload"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="@color/change_photo"
+                    android:background="@drawable/button_shape"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="48dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:paddingHorizontal="10dp"
+                        android:fontFamily="@font/pop_pins_semi_bold"
+                        android:textSize="@dimen/_12ssp"
+                        android:text="Upload"/>
+                </LinearLayout>
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"/>
+                <!--                <LinearLayout-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:background="@drawable/button_shape"-->
+                <!--                    android:layout_gravity="center"-->
+                <!--                    android:gravity="center_horizontal"-->
+                <!--                    android:backgroundTint="@color/delete_photo"-->
+                <!--                    android:layout_height="48dp">-->
+                <!--                    <TextView-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="match_parent"-->
+                <!--                        android:textColor="@color/black"-->
+                <!--                        android:gravity="center"-->
+                <!--                        android:paddingHorizontal="10dp"-->
+                <!--                       android:fontFamily="@font/pop_pins_semi_bold"-->
+                <!--                        android:textSize="@dimen/_12ssp"-->
+                <!--                        android:text="Elimina foto"/>-->
+                <!--                </LinearLayout>-->
+
+            </RelativeLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -70,6 +132,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/user"/>
                 <EditText
+                    android:id="@+id/firstED"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
@@ -101,6 +164,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/user"/>
                 <EditText
+                    android:id="@+id/lastED"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
@@ -132,6 +196,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/email"/>
                 <EditText
+                    android:id="@+id/emailED"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
@@ -165,6 +230,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/call"/>
                 <EditText
+                    android:id="@+id/phoneNumber"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
@@ -190,6 +256,7 @@
                 android:background="@drawable/edit_bg">
 
                 <EditText
+                    android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
@@ -215,6 +282,7 @@
                 android:background="@drawable/edit_bg">
 
                 <EditText
+                    android:id="@+id/postalED"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
@@ -239,12 +307,11 @@
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
 
-                <EditText
+                <Spinner
+                    android:id="@+id/sex"
                     android:layout_width="match_parent"
-                    android:background="@android:color/transparent"
+                    android:spinnerMode="dialog"
                     android:paddingHorizontal="10dp"
-                    android:hint="test"
-                    android:singleLine="true"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
@@ -258,22 +325,31 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
-
-                <EditText
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/calendar"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/dateTV"
+                    android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
-                    android:hint="12-12-1997"
                     android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
-            </LinearLayout>
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -283,22 +359,64 @@
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
-
-                <EditText
-                    android:layout_width="match_parent"
+                <ImageView
+                    android:id="@+id/start"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/startTV"
+                    android:layout_width="wrap_content"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
-                    android:hint="test"
                     android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
-            </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:id="@+id/end"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/endTV"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -315,6 +433,7 @@
                 android:background="@drawable/edit_bg">
 
                 <EditText
+                    android:id="@+id/recognitionED"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
@@ -340,6 +459,7 @@
                 android:background="@drawable/edit_bg">
 
                 <EditText
+                    android:id="@+id/clinic"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                      android:paddingHorizontal="10dp"
@@ -363,9 +483,10 @@
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
-                <EditText
+                <Spinner
+                    android:id="@+id/specialistSP"
                     android:layout_width="match_parent"
-                    android:background="@android:color/transparent"
+                    android:spinnerMode="dialog"
                     android:paddingHorizontal="10dp"
                     android:hint="test"
                     android:singleLine="true"
@@ -376,6 +497,7 @@
 
 
             <LinearLayout
+                android:id="@+id/saveBTN"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
                 android:background="@drawable/button_shape"

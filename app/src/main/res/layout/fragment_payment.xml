@@ -7,107 +7,110 @@
     android:background="@color/white"
     tools:context=".fragments.PaymentFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/payment_bg"
-        android:orientation="vertical">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:includeFontPadding="false"
-                android:text="Pagamenti ID: 74429347844"
-                android:textColor="@color/black"
-                android:fontFamily="@font/pop_pins_bold"
-                android:textSize="@dimen/_14ssp"/>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:padding="4dp"-->
+<!--        android:layout_margin="@dimen/_10sdp"-->
+<!--        android:background="@drawable/payment_bg"-->
+<!--        android:orientation="vertical">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:text="Pagamenti ID: 74429347844"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:fontFamily="@font/pop_pins_bold"-->
+<!--                android:textSize="@dimen/_14ssp"/>-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="12 Augasto"
-                android:layout_marginTop="3dp"
-                android:includeFontPadding="false"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/payment_gray"
-                android:fontFamily="@font/pop_pins_medium"
-                android:textSize="@dimen/_12ssp"/>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="12 Augasto"-->
+<!--                android:layout_marginTop="3dp"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:textColor="@color/payment_gray"-->
+<!--                android:fontFamily="@font/pop_pins_medium"-->
+<!--                android:textSize="@dimen/_12ssp"/>-->
 
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp">
-            <de.hdodenhof.circleimageview.CircleImageView
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/profile_image"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginTop="@dimen/_4sdp"
-                android:layout_marginStart="@dimen/_1sdp"
-                android:src="@drawable/delete_user"
+<!--        </RelativeLayout>-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="5dp">-->
+<!--            <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                android:id="@+id/profile_image"-->
+<!--                android:layout_width="@dimen/_40sdp"-->
+<!--                android:layout_height="@dimen/_40sdp"-->
+<!--                android:layout_marginTop="@dimen/_4sdp"-->
+<!--                android:layout_marginStart="@dimen/_1sdp"-->
+<!--                android:src="@drawable/delete_user"-->
 
-                />
+<!--                />-->
 
-            <TextView
-                android:id="@+id/nameTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_pins_semi_bold"
-                android:textSize="@dimen/_13ssp"
-                android:includeFontPadding="false"
-                android:textColor="@color/black"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_toEndOf="@id/profile_image"
-                android:layout_alignTop="@id/profile_image"
-                android:text="Dr.mistry"/>
+<!--            <TextView-->
+<!--                android:id="@+id/nameTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/pop_pins_semi_bold"-->
+<!--                android:textSize="@dimen/_13ssp"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:layout_toEndOf="@id/profile_image"-->
+<!--                android:layout_alignTop="@id/profile_image"-->
+<!--                android:text="Dr.mistry"/>-->
 
-            <TextView
-                android:id="@+id/specilistTV"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/pop_pins_medium"
-                android:textSize="@dimen/_10ssp"
-                android:includeFontPadding="false"
-                android:textColor="@color/black"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="0dp"
-                android:layout_toEndOf="@id/profile_image"
-                android:layout_below="@id/nameTV"
-                android:text="Dermatologia"/>
+<!--            <TextView-->
+<!--                android:id="@+id/specilistTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/pop_pins_medium"-->
+<!--                android:textSize="@dimen/_10ssp"-->
+<!--                android:includeFontPadding="false"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="0dp"-->
+<!--                android:layout_toEndOf="@id/profile_image"-->
+<!--                android:layout_below="@id/nameTV"-->
+<!--                android:text="Dermatologia"/>-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:text="$5"
-                android:textSize="@dimen/_14ssp"
-                android:gravity="center"
-                android:layout_alignTop="@id/nameTV"
-                android:layout_alignBottom="@id/specilistTV"
-                android:textColor="@color/primary"
-                android:fontFamily="@font/pop_pins_semi_bold"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pagato"
-                android:layout_below="@id/specilistTV"
-                android:layout_alignParentEnd="true"
-                android:fontFamily="@font/pop_pins_medium"
-                android:textSize="@dimen/_12ssp"/>
-"
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:text="$5"-->
+<!--                android:textSize="@dimen/_14ssp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_alignTop="@id/nameTV"-->
+<!--                android:layout_alignBottom="@id/specilistTV"-->
+<!--                android:textColor="@color/primary"-->
+<!--                android:fontFamily="@font/pop_pins_semi_bold"-->
+<!--                />-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Pagato"-->
+<!--                android:layout_below="@id/specilistTV"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:fontFamily="@font/pop_pins_medium"-->
+<!--                android:textSize="@dimen/_12ssp"/>-->
+<!--"-->
 
-        </RelativeLayout>
-    </LinearLayout>
+<!--        </RelativeLayout>-->
+<!--    </LinearLayout>-->
 
-
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="This is the part of the next milestone"/>
 
 
 

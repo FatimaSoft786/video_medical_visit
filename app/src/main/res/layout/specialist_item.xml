@@ -3,14 +3,17 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginTop="10dp"
+    android:id="@+id/rel"
     android:layout_marginHorizontal="10dp"
-    android:background="@drawable/button_shape"
-    android:backgroundTint="#26022C49">
+
+    >
     <TextView
         android:id="@+id/TV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dermatologia"
+        android:backgroundTint="#26022C49"
+        android:background="@drawable/button_shape"
         android:padding="10dp"
         android:includeFontPadding="false"
         android:fontFamily="@font/pop_pins_regular"

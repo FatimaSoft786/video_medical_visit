@@ -39,8 +39,8 @@
                 android:textSize="20sp"/>
             <ImageView
                 android:id="@+id/like"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:src="@drawable/un_fill_favorite"
                 android:layout_alignParentEnd="true"/>
             <ImageView
@@ -89,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3.8(10 reviews)"
+                android:text="3.8(10 recensioni)"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textColor="#333333"
                 android:textSize="14sp"
@@ -115,7 +115,7 @@
                 android:gravity="center"
                 android:fontFamily="@font/pop_pins_semi_bold"
                 android:textSize="16sp"
-                android:text="Book now"/>
+                android:text="Prenota"/>
         </LinearLayout>
 
     </RelativeLayout>

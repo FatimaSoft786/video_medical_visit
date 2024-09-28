@@ -1,14 +1,15 @@
 package com.example.videomedicalvisit.fragments
 
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity.MODE_PRIVATE
+import androidx.fragment.app.Fragment
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
@@ -19,10 +20,12 @@ import com.example.videomedicalvisit.databinding.FragmentSettingsBinding
 import com.fatima.soft.dogz.utils.Constant
 import com.fatima.soft.dogz.utils.VolleySingleton
 
+
 class SettingsFragment : Fragment() {
 
     private lateinit var binding: FragmentSettingsBinding
    lateinit var token: String
+    private var mContext: Context? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -60,16 +63,20 @@ class SettingsFragment : Fragment() {
 
                     val profile_picture = user_details.getString("picture_url")
                     val default_picture = user_details.getString("default_picture_url")
-                    if (profile_picture == ""){
-                        Glide.with(requireActivity())
-                            .load(default_picture)
-                            .into(binding.profileImage)
-                    }
-                    else{
-                        Glide.with(requireActivity())
-                            .load(profile_picture)
-                            .into(binding.profileImage)
-                    }
+                  try {
+                      if (profile_picture == ""){
+                          Glide.with(mContext!!)
+                              .load(default_picture)
+                              .into(binding.profileImage)
+                      }
+                      else{
+                          Glide.with(mContext!!)
+                              .load(profile_picture)
+                              .into(binding.profileImage)
+                      }
+                  }catch (e: Exception) {
+                      e.printStackTrace()
+                  }
                     if (!sex.isNullOrEmpty()){
                         binding.sexTV.text = sex
                     } else {
@@ -93,5 +100,15 @@ class SettingsFragment : Fragment() {
             }
         }
         VolleySingleton.getInstance(requireActivity()).add(jsonRequest)
+    }
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        mContext = null
     }
 }

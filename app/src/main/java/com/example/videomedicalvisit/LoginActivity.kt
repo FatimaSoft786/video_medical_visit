@@ -53,6 +53,9 @@ class LoginActivity : AppCompatActivity() {
         binding.login.setOnClickListener {
        login()
         }
+        binding.doctor.setOnClickListener {
+            startActivity(Intent(applicationContext,DoctorActivity::class.java))
+        }
         binding.signUp.setOnClickListener {
             startActivity(Intent(applicationContext,SignUpActivity::class.java))
             finish()
@@ -88,17 +91,23 @@ class LoginActivity : AppCompatActivity() {
                 Constant.LOGIN_API,
                 jsonObject,
                 { response ->
-
+                    Log.d("TAG", "login: ${response}")
                     binding.PB.visibility = View.GONE
                     binding.TV.visibility = View.VISIBLE
                     val success = response.getBoolean("success")
                     if(success == true){
                         val token = response.getString("accessToken")
+                        val role = response.getString("role")
                         val id = response.getString("id")
                         editor.putString("token",token)
                         editor.putString("id",id)
                         editor.apply()
-                        startActivity(Intent(applicationContext,MainActivity::class.java))
+                        if(role == "Patient"){
+                            startActivity(Intent(applicationContext,MainActivity::class.java))
+                        }else {
+                            startActivity(Intent(applicationContext,DoctorDashboardActivity::class.java))
+                        }
+
                     }else{
                         val message = response.getString("message");
                         Toast.makeText(applicationContext, "${message.toString()}", Toast.LENGTH_SHORT).show()

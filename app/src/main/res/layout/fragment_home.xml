@@ -1,188 +1,195 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:scrollbarSize="2dp"
+    android:scrollbarThumbVertical="@color/primary"
     android:background="@color/white"
     tools:context=".fragments.HomeFragment">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_80sdp"
-        android:paddingHorizontal="20dp"
-        android:background="@drawable/setting_card">
-        <TextView
-            android:id="@+id/nameTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hi,Shahzaib"
-            android:includeFontPadding="false"
-            android:layout_above="@id/bottomTV"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:fontFamily="@font/pop_pins_bold"
-            />
-        <TextView
-            android:id="@+id/bottomTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Find your doctor"
-            android:textColor="@color/white"
-            android:fontFamily="@font/pop_pins_medium"
-            android:textSize="12sp"
-            android:includeFontPadding="false"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/_20sdp"/>
-
-        <ImageView
-            android:contentDescription="@string/app_name"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_alignTop="@id/nameTV"
-            android:layout_alignBottom="@id/bottomTV"
-            android:layout_alignParentEnd="true"
-            android:src="@drawable/notify"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/search_bg"
-        android:layout_height="50dp">
-        <EditText
-            android:id="@+id/ed"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@null"
-            android:textSize="@dimen/_13ssp"
-            android:fontFamily="@font/pop_pins_regular"
-            android:paddingHorizontal="14dp"
-            android:hint="Enter search here"/>
-      <RelativeLayout
-          android:id="@+id/search"
-          android:layout_width="wrap_content"
-         android:layout_alignParentEnd="true"
-          android:background="@drawable/search_btn_bg"
-          android:layout_height="match_parent">
-
-          <TextView
-              android:layout_width="wrap_content"
-              android:layout_height="wrap_content"
-              android:text="Cera"
-              android:paddingHorizontal="10dp"
-              android:textSize="@dimen/_13ssp"
-              android:fontFamily="@font/pop_pins_medium"
-              android:textColor="@color/white"
-              android:layout_centerInParent="true"
-              />
-      </RelativeLayout>
-    </RelativeLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="#00497B"
-        android:orientation="vertical"
-        android:layout_marginHorizontal="20dp"
-        android:background="@drawable/button_shape">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Medical Center"
-            android:textSize="24sp"
-            android:includeFontPadding="false"
-            android:paddingHorizontal="20dp"
-            android:layout_marginTop="10dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/pop_pins_bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
-            android:textSize="14sp"
-            android:includeFontPadding="false"
-            android:layout_marginBottom="16dp"
-            android:paddingHorizontal="20dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/pop_pins_regular"/>
-    </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/categoriesTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Categories"
-            android:includeFontPadding="false"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/pop_pins_bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="See all"
-            android:includeFontPadding="false"
-            android:gravity="center_vertical"
-            android:layout_alignTop="@id/categoriesTV"
-            android:layout_alignBottom="@id/categoriesTV"
-            android:layout_alignParentEnd="true"
-            android:textSize="18sp"
-            android:textColor="@color/primary"
-            android:fontFamily="@font/pop_pins_semi_bold"
-            />
-    </RelativeLayout>
-
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/specialistRV"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal"
-       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="10dp"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/doctorsTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="All doctors"
-            android:includeFontPadding="false"
-            android:textSize="20sp"
-            android:textColor="@color/black"
-            android:fontFamily="@font/pop_pins_bold"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="See all"
-            android:gravity="center_vertical"
-            android:layout_alignTop="@id/doctorsTV"
-            android:layout_alignBottom="@id/doctorsTV"
-            android:layout_alignParentEnd="true"
-            android:textSize="18sp"
-            android:textColor="@color/primary"
-            android:fontFamily="@font/pop_pins_semi_bold"
-            />
-    </RelativeLayout>
-    
-   <androidx.recyclerview.widget.RecyclerView
-       android:id="@+id/RV"
+   <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:orientation="vertical"
-       app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+       android:orientation="vertical">
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/_80sdp"
+           android:paddingHorizontal="20dp"
+           android:background="@drawable/setting_card">
+           <TextView
+               android:id="@+id/nameTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:includeFontPadding="false"
+               android:layout_above="@id/bottomTV"
+               android:layout_marginTop="@dimen/_20sdp"
+               android:textColor="@color/white"
+               android:textSize="16sp"
+               android:fontFamily="@font/pop_pins_bold"
+               />
+           <TextView
+               android:id="@+id/bottomTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Find your doctor"
+               android:textColor="@color/white"
+               android:fontFamily="@font/pop_pins_medium"
+               android:textSize="12sp"
+               android:includeFontPadding="false"
+               android:layout_alignParentBottom="true"
+               android:layout_marginBottom="@dimen/_20sdp"/>
+
+           <ImageView
+               android:contentDescription="@string/app_name"
+               android:layout_width="24dp"
+               android:layout_height="24dp"
+               android:layout_alignTop="@id/nameTV"
+               android:layout_alignBottom="@id/bottomTV"
+               android:layout_alignParentEnd="true"
+               android:src="@drawable/notify"/>
+
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginTop="20dp"
+           android:background="@drawable/search_bg"
+           android:layout_height="50dp">
+           <AutoCompleteTextView
+               android:id="@+id/ed"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:background="@null"
+               android:textSize="@dimen/_10ssp"
+               android:fontFamily="@font/pop_pins_regular"
+               android:paddingHorizontal="14dp"
+               android:hint="Cerca per medico o specializzazione..."/>
+           <RelativeLayout
+               android:id="@+id/search"
+               android:layout_width="wrap_content"
+               android:layout_alignParentEnd="true"
+               android:background="@drawable/search_btn_bg"
+               android:layout_height="match_parent">
+
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Cera"
+                   android:paddingHorizontal="10dp"
+                   android:textSize="@dimen/_13ssp"
+                   android:fontFamily="@font/pop_pins_medium"
+                   android:textColor="@color/white"
+                   android:layout_centerInParent="true"
+                   />
+           </RelativeLayout>
+       </RelativeLayout>
 
 
-</LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:backgroundTint="#00497B"
+           android:orientation="vertical"
+           android:layout_marginHorizontal="20dp"
+           android:background="@drawable/button_shape">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Medical Center"
+               android:textSize="24sp"
+               android:includeFontPadding="false"
+               android:paddingHorizontal="20dp"
+               android:layout_marginTop="10dp"
+               android:textColor="@color/white"
+               android:fontFamily="@font/pop_pins_bold"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Yorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis."
+               android:textSize="14sp"
+               android:includeFontPadding="false"
+               android:layout_marginBottom="16dp"
+               android:paddingHorizontal="20dp"
+               android:textColor="@color/white"
+               android:fontFamily="@font/pop_pins_regular"/>
+       </LinearLayout>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginVertical="10dp"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/categoriesTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Specializzazioni"
+               android:includeFontPadding="false"
+               android:textSize="20sp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/pop_pins_bold"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Visualizza tutti"
+               android:includeFontPadding="false"
+               android:gravity="center_vertical"
+               android:layout_alignTop="@id/categoriesTV"
+               android:layout_alignBottom="@id/categoriesTV"
+               android:layout_alignParentEnd="true"
+               android:textSize="18sp"
+               android:textColor="@color/primary"
+               android:fontFamily="@font/pop_pins_semi_bold"
+               />
+       </RelativeLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/specialistRV"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_marginHorizontal="20dp"
+           android:layout_marginVertical="10dp"
+           android:layout_height="wrap_content">
+           <TextView
+               android:id="@+id/doctorsTV"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Dottori"
+               android:includeFontPadding="false"
+               android:textSize="20sp"
+               android:textColor="@color/black"
+               android:fontFamily="@font/pop_pins_bold"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Visualizza tutti"
+               android:gravity="center_vertical"
+               android:layout_alignTop="@id/doctorsTV"
+               android:layout_alignBottom="@id/doctorsTV"
+               android:layout_alignParentEnd="true"
+               android:textSize="18sp"
+               android:textColor="@color/primary"
+               android:fontFamily="@font/pop_pins_semi_bold"
+               />
+       </RelativeLayout>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/RV"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+   </LinearLayout>
+
+</ScrollView>

@@ -1,46 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:background="@color/white"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EditProfileActivity">
-
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.DoctorProfileFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primary">
-        <ImageView
-            android:id="@+id/backIV"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_30sdp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/arrow_left"/>
         <TextView
-            android:layout_width="match_parent"
-            android:layout_toEndOf="@id/backIV"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:fontFamily="@font/pop_pins_bold"
-            android:textSize="@dimen/_14ssp"
-            android:text="Modifica Profilo"
+            android:text="Profile"
+            android:textSize="@dimen/_16ssp"
+            android:fontFamily="@font/pop_pins_semi_bold"
             android:textColor="@color/white"/>
+
     </RelativeLayout>
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:scrollbars="vertical"
-        android:scrollIndicators="right"
-        android:scrollbarThumbVertical="@color/primary">
+        android:scrollbarThumbVertical="@color/primary"
+        android:scrollbarSize="2dp">
         <LinearLayout
+            android:paddingHorizontal="@dimen/_31sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_120sdp">
@@ -57,65 +50,10 @@
                     android:tint="@color/primary"
                     app:civ_border_color="@color/primary"/>
             </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:orientation="horizontal">
-                <RelativeLayout
-                    android:id="@+id/changeLT"
-                    android:layout_width="wrap_content"
-                    android:backgroundTint="@color/change_photo"
-                    android:background="@drawable/button_shape"
-                    android:layout_gravity="center"
-                    android:layout_centerHorizontal="true"
-                    android:layout_height="48dp">
-                    <TextView
-                        android:id="@+id/tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:textColor="@color/black"
-                        android:gravity="center"
-                        android:paddingHorizontal="10dp"
-                        android:fontFamily="@font/pop_pins_semi_bold"
-                        android:textSize="@dimen/_12ssp"
-                        android:text="Cambia foto"/>
-                    <ProgressBar
-                        android:id="@+id/PB1"
-                        android:visibility="gone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:indeterminateTint="@color/black"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-                <Space
-                    android:layout_width="5dp"
-                    android:layout_height="wrap_content"/>
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:background="@drawable/button_shape"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:gravity="center_horizontal"-->
-<!--                    android:backgroundTint="@color/delete_photo"-->
-<!--                    android:layout_height="48dp">-->
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:textColor="@color/black"-->
-<!--                        android:gravity="center"-->
-<!--                        android:paddingHorizontal="10dp"-->
-<!--                       android:fontFamily="@font/pop_pins_semi_bold"-->
-<!--                        android:textSize="@dimen/_12ssp"-->
-<!--                        android:text="Elimina foto"/>-->
-<!--                </LinearLayout>-->
-
-            </RelativeLayout>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome"
+                android:text="@string/first_name"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
@@ -132,32 +70,28 @@
                     android:contentDescription="@string/app_name"
                     android:layout_gravity="center_vertical"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/name"/>
-                <EditText
-                    android:id="@+id/firstED"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:id="@+id/first"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
-                    android:lines="1"
-                    android:clickable="false"
-                    android:focusable="false"
+                    android:hint="abc"
+                    android:gravity="center_vertical"
                     android:singleLine="true"
-                    android:hint="Test"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cognome"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/last_name"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
@@ -169,14 +103,14 @@
                     android:contentDescription="@string/app_name"
                     android:layout_gravity="center_vertical"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/name"/>
-                <EditText
-                    android:id="@+id/lastED"
+                    android:src="@drawable/user"/>
+                <TextView
+                    android:id="@+id/last"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
+                    android:gravity="center_vertical"
                     android:singleLine="true"
-                    android:hint="Test"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
@@ -185,12 +119,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="E-mail"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/e_mail"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
@@ -203,27 +136,28 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/email"/>
-                <EditText
-                    android:id="@+id/emailED"
+                <TextView
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
+                    android:gravity="center_vertical"
                     android:singleLine="true"
-                    android:hint="test@gmail.com"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
             </LinearLayout>
 
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cellulare"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/phone_number"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
@@ -236,39 +170,11 @@
                     android:layout_gravity="center_vertical"
                     android:layout_marginHorizontal="10dp"
                     android:src="@drawable/call"/>
-                <EditText
-                    android:id="@+id/mobileED"
+                <TextView
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:padding="0dp"
-                    android:singleLine="true"
-                    android:hint="1234567890"
-                    android:fontFamily="@font/pop_pins_regular"
-                    android:textSize="@dimen/_12ssp"
-                    android:layout_height="match_parent"/>
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Codice postale"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:textColor="@color/black"
-                android:fontFamily="@font/pop_pins_medium"
-                android:textSize="@dimen/_14ssp"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:orientation="horizontal"
-                android:background="@drawable/edit_bg">
-
-                <EditText
-                    android:id="@+id/codeED"
-                    android:layout_width="match_parent"
-                    android:background="@android:color/transparent"
-                    android:paddingHorizontal="10dp"
-                    android:includeFontPadding="false"
+                    android:gravity="center_vertical"
                     android:singleLine="true"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
@@ -279,25 +185,48 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Città"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
 
-                <EditText
-                    android:id="@+id/cityED"
+                <TextView
+                    android:id="@+id/location"
                     android:layout_width="match_parent"
                     android:background="@android:color/transparent"
                     android:paddingHorizontal="10dp"
                     android:singleLine="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
 
-                    android:includeFontPadding="false"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Codice postale"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <TextView
+                    android:id="@+id/code"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
                     android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
                     android:layout_height="match_parent"/>
@@ -307,44 +236,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sesso"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:orientation="horizontal"
                 android:background="@drawable/edit_bg">
 
-                <Spinner
+                <TextView
                     android:id="@+id/sex"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:spinnerMode="dialog" />
-
-<!--                <EditText-->
-<!--                    android:id="@+id/sexED"-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:background="@android:color/transparent"-->
-<!--                    android:paddingHorizontal="10dp"-->
-<!--                    android:singleLine="true"-->
-<!--                    android:hint="test"-->
-<!--                    android:fontFamily="@font/pop_pins_regular"-->
-<!--                    android:textSize="@dimen/_12ssp"-->
-<!--                    android:layout_height="match_parent"/>-->
+                    android:spinnerMode="dialog"
+                    android:paddingHorizontal="10dp"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
             </LinearLayout>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Data di nascita"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_14sdp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/pop_pins_medium"
                 android:textSize="@dimen/_14ssp"/>
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
@@ -371,32 +290,152 @@
                     android:layout_height="match_parent"/>
             </RelativeLayout>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anni di studio"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
             <RelativeLayout
-                android:id="@+id/change"
-                android:layout_marginTop="@dimen/_15sdp"
                 android:layout_width="match_parent"
-                android:background="@drawable/button_shape"
-                android:layout_gravity="center"
-                android:layout_height="48dp">
-                <ProgressBar
-                    android:visibility="gone"
-                    android:id="@+id/PB"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:indeterminateTint="@color/white"/>
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:id="@+id/start"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_alignParentEnd="true"/>
                 <TextView
-                    android:id="@+id/TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:fontFamily="@font/pop_pins_bold"
+                    android:id="@+id/startTV"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/pop_pins_regular"
                     android:textSize="@dimen/_12ssp"
-                    android:text="Salva"/>
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <ImageView
+                    android:id="@+id/end"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/baseline_calendar_month_24"
+                    android:layout_alignParentEnd="true"/>
+                <TextView
+                    android:id="@+id/endTV"
+                    android:layout_width="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:singleLine="true"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
             </RelativeLayout>
 
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riconoscimenti speciali"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <TextView
+                    android:id="@+id/special_recognition"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:hint="test"
+                    android:singleLine="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indiritto Studio Medico/Ospedale"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+
+                <TextView
+                    android:id="@+id/clinic"
+                    android:layout_width="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Specializzazioni"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/pop_pins_medium"
+                android:textSize="@dimen/_14ssp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edit_bg">
+                <TextView
+                    android:id="@+id/specialist"
+                    android:layout_width="match_parent"
+                    android:spinnerMode="dialog"
+                    android:paddingHorizontal="10dp"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:fontFamily="@font/pop_pins_regular"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
+
 
 </LinearLayout>

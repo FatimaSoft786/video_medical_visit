@@ -1,6 +1,7 @@
 package com.example.videomedicalvisit
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.Editable
 import android.text.InputType
@@ -49,6 +50,19 @@ class SignUpActivity : AppCompatActivity() {
         }
         binding.signUp.setOnClickListener {
         signUp()
+        }
+        binding.privacyTV.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://res.cloudinary.com/dm5cvivrc/image/upload/v1716117064/Informativa_sulla_Privacy_gsajxd.pdf"))
+            startActivity(intent)
+        }
+        binding.login.setOnClickListener {
+            startActivity(Intent(applicationContext,LoginActivity::class.java))
+        }
+        binding.termsCondition.setOnClickListener {
+        val intent = Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://res.cloudinary.com/dm5cvivrc/image/upload/v1716117500/ITA_Termini_e_Condizioni_rbomze.pdf"))
+            startActivity(intent)
         }
     }
     private fun signUp() {

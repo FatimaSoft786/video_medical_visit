@@ -59,8 +59,10 @@ class EditConsentFormActivity : AppCompatActivity() {
         token = sharedPref.getString("token", "")!!
         medicalFormCheckboxes()
         binding.save.setOnClickListener {
-
            medicalHistory()
+        }
+        binding.backIV.setOnClickListener {
+            finish()
         }
 
     }
